@@ -1,0 +1,5 @@
+<h1><%= @user.name %></h1>
+<% @user.attributes.except("id", "password_digest", "admin").each do |key, value| %>
+    <p><strong><%=key.capitalize%></strong>: <%=value%></p>
+<% end %>
+
